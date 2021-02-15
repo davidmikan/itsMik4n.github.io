@@ -1,0 +1,30 @@
+body {
+ background-color: aqua;
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+ margin-top: 5vh;
+}
+
+#baner {
+ max-width: 50vw;
+ max-height: 20vh;
+ animation: rot 2s infinite;
+}
+
+#ifon {
+ max-width: 50vw;
+ max-height: 70vh;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
