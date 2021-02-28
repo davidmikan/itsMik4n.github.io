@@ -1,20 +1,48 @@
 body {
- background-color: aqua;
- display: flex;
- flex-direction: column;
-  align-items: center;
- margin-top: 5vh;
+    background-color: #c1e0ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
 }
 
-#baner {
- max-width: 50vw;
- max-height: 20vh;
- animation: rot 2s infinite;
+#phone {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 50vw;
 }
 
-#ifon {
- max-width: 50vw;
- max-height: 70vh;
+#frame {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+
+#wallpaper {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: crimson;
+}
+
+#apps {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: darkcyan;
+    margin: 15% 0% 0% 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    max-width: 100%;
+}
+
+.app {
+    background-color: darkkhaki;
+    position: relative;
+    width: 9vw;
+    height: 13vw;
+    margin: 5% 0 5% 4%;
 }
 
 @keyframes rot {
