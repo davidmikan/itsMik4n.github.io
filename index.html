@@ -17,6 +17,30 @@
             src: url('/fonts/didot.ttf') format("ttf");
         }
 
+        @media not all and (hover: hover) {
+            .content {
+                width: 95vw;
+                padding-top: 2rem;
+            }
+            #namecard {
+                flex-flow: column;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+            }
+        }
+        @media (hover: hover) {
+            .content {
+                max-width: 65vw;
+                width: 55rem;
+                padding-top: 5rem;
+            }
+            #namecard {
+                flex-flow: row;
+                align-items: flex-end;
+                margin-bottom: 3rem;
+            }
+        }
+
         body {
             margin: 0;
             width: 100%;
@@ -27,9 +51,6 @@
         }
 
         .content {
-            max-width: 65vw;
-            width: 55rem;
-            padding-top: 5rem;
             padding-bottom: 5rem;
             font-family: 'avenir';
             font-size: 1.2rem;
@@ -64,10 +85,7 @@
 
         #namecard {
             display: flex;
-            flex-flow: row;
             justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 3rem;
         }
 
         #namecard-el {
