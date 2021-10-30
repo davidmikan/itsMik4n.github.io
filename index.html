@@ -1,35 +1,106 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="steil.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Mikan Lebenslauf</title>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: 'avenirlight';
+            src: url('fonts/avenirlight.ttf');
+        }
+        @font-face {
+            font-family: 'didot';
+            src: url('fonts/didot.ttf');
+        }
 
-    <body id="bodi">
-        <div id="phone">
-        <img id="frame" src="iphonetemplate.png" />
-        <div id="wallpaper"></div>
-        <div id="apps">
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
-            <div class="app">App</div>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(252, 252, 252);
+        }
+
+        .content {
+            max-width: 65vw;
+            width: 55rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            font-family: 'avenirlight';
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-family: 'Didot';
+            font-size: 2.4rem;
+        }
+
+        h2 {
+            font-family: 'Didot';
+            font-size: 1.7rem;
+        }
+        
+        p {
+            padding-left: 2rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: black underline;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        #namecard {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+        }
+
+        #namecard-el {
+            margin-bottom: 0;
+        }
+
+    </style>
+    <div class="content">
+        <div id="namecard">
+            <h1 id="namecard-el">David Mikan</h1>
+            <p id="namecard-el">📞 +43 660 3412351<br />📨 <a href="mailto:david.mikan03@gmail.com">david.mikan03@gmail.com</a></p>
         </div>
-        </div>
-        <h2>Pick the apps for your new iPhone!</h2>
-        <p>
-            Due to new EU customer protection regulations concerning the tech market, we are obliged to let every customer know <i>precisely</i> what comes with their iPhone. All applications installed on your phone must be documented and known to you at the point of buying. For that reason, we are offering you the one-time offer to pick all the apps you want to be available to you yourself, for only an additional $199!
-        </p>
-        <script src="skript.js"></script>
-    </body>
+        <h2>Bildung</h2>
+        <p>Ich habe 2013-2021 das Akademische Gymnasium Wien besucht und 2021 mit gutem Erfolg maturiert.</p>
+        <p>Momentan studiere ich Technische Mathematik an der TU Wien und möchte im Wintersemester 2022 das Informatikstudium an der TU beginnen.</p>
+        <h2>Praktika / Joberfahrung</h2>
+        <p><u>x 2018</u>: Schulpraktikum beim Spielentwickler broken rules</p>
+        <p><u>Sep. 2019- Okt. 2021</u>: Job als Praktikant und anschließend QA-Tester beim Spieleentwickler kunabi brother</p>
+        <p><u>Nov. - Dez. 2021</u>: QA-Tester für broken rules</p>
+        <h2>Sprachen</h2>
+        <p><u>Deutsch</u>: muttersprachliches Niveau</p>
+        <p><u>Serbokroatisch</u>: muttersprachliches Niveau</p>
+        <p><u>Französisch</u>: B2</p>
+        <p><u>Englisch</u>: B2-C1</p>
+        <h2>Software- und Programmiererfahrung</h2>
+        <p>Ich bin vertraut <u>Adobe Photoshop</u> und <u>Illustrator</u>. Ich kann mit der 3d-Software <u>Blender</u> umgehen und mithilfe von <u>Davinci Resolve</u> Videos schneiden und bearbeiten.</p>
+        <p><u>HTML/CSS/Javascript und Flask</u>: ich habe statische Websites in HTML/CSS gebaut und kann sie mithilfe von Javascript interaktiv machen. Ferner beherrsche ich das Python-Framework Flask, um ein Backend für eine Website zu bauen.</p>
+        <p><u>Python</u>: Ich habe im Rahmen meiner vorwissenschaftlichen Arbeit mithilfe von Python Daten von reddit.com gesammelt und diese auch in Python statistisch ausgewertet. Weiters habe ich mehrere Projekte in Python implementiert.</p>
+        <p>Zurzeit lerne ich die Programmiersprache C in meinem Mathematikstudium.</p>
+        <h2>Hobbies / Erfolge</h2>
+        <p>Ich belegte innerhalb meiner Schule 3 Mal den ersten Platz im nationalen Logikwettbewerb 'Känguru der Mathematik'</p>
+        <p>Ich habe 8 Jahre lang Wasserball trainiert und mit meinem Team mehrmals die Österreichische Meisterschaft gewonnen.</p>
+        <p>In meiner Freizeit bastle ich gerne an Programmierprojekten und interessiere mich für alles rund um Coding, Design und Mathe.</p>
+    </div>
+</body>
 </html>
