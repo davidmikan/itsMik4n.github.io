@@ -21,11 +21,12 @@ field2 = null
 
 // controlled variables
 window.FieldConfig = {
-    height: 20,
-    width: 30,
+    height: 40,
+    width: 50,
     zoom: 10,
     seed: 0,
-    debugMode: true
+    debugMode: false,
+    debugCol: "red"
 }
 window.ParticleConfig = {
     count: 5000,
@@ -33,7 +34,8 @@ window.ParticleConfig = {
     speed: 3,
     initialSpeed: new Vector2(-1, 0),
     color: "#ffffff",
-    opacity: 0.1
+    opacity: 0.1,
+    userainbow: false
 }
 window.setFieldVar = function(ref, val) {
     Object.defineProperty(window.FieldConfig, ref, {value:val})
@@ -59,6 +61,24 @@ function lerp(a, b, x) {
 }
 function getColorByVar(v, max, arr=rainbowcolors) {
     return "#" + arr[Math.floor(v / (max / arr.length))]
+}
+window.togglePause = function() {
+    running = !running
+    if (running) animate()
+    document.getElementById("pause-btn").innerHTML = running ? "Pause" : "Play"
+}
+window.saveImage = function() {
+    if(running) window.togglePause()
+
+    ctx.globalCompositeOperation = 'destination-over'
+    ctx.beginPath()
+    ctx.fillStyle = canvas.style.backgroundColor
+    ctx.rect(0,0,canvas.width,canvas.height)
+    ctx.closePath()
+    ctx.globalCompositeOperation = 'source-over'
+
+    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+    window.location.href=image
 }
 
 // user interaction
@@ -133,7 +153,7 @@ class FlowField {
         let vecw = canvas.width / this.width,
             vech = canvas.height / this.height
         
-        seed = !seed ? Math.random() * 10000 : seed
+        seed = !seed ? Math.random() * 10000 : seed*100
         for (let i=0; i<=h; i++) {
             let row = []
             for (let j=0; j<=w; j++) {
@@ -228,7 +248,7 @@ function init() {
     
     for (let i = 0; i < window.ParticleConfig.count; i++) {
         let y = Math.random()*canvas.height
-        let col = userainbow ? getColorByVar(y, canvas.height, rainbowcolors) : window.ParticleConfig.color
+        let col = window.ParticleConfig.userainbow ? getColorByVar(y, canvas.height, rainbowcolors) : window.ParticleConfig.color
         objects.push(new FieldParticle(randInt(canvas.width-10,canvas.width-1), y, 1.5, field, window.ParticleConfig.speed, window.ParticleConfig.fieldInfluence, col, window.ParticleConfig.opacity))
     }
 
@@ -253,7 +273,7 @@ function animate() {
     // for (let i=0; i<2; i++) {
     //     objects.push(new FieldParticle(canvas.width-1, Math.random()*canvas.height, 2, field, window.ParticleConfig.speed, window.ParticleConfig.fieldInfluence, window.ParticleConfig.color, window.ParticleConfig.opacity))
     // }
-11
+
     if (!iterations%30) {
 
     }

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flow Fields</title>
+    <title>Canvas Boilerplate</title>
 </head>
 <body>
     <canvas id="canvas"></canvas>
-    <script src="flowfields_src/flowfield.js" type="module"></script>
+    <script src="src/flowfield.js" type="module"></script>
     <div class="overlay">
         <div id="controlcenter">
             <div class="cc-row">
                 <p class="var-title">Field Width</p>
-                <input class="var-inp" type="number" value="20" onchange="setFieldVar('width', this.value)">
+                <input class="var-inp" type="number" value="50" onchange="setFieldVar('width', this.value)">
             </div>
             <div class="cc-row">
                 <p class="var-title">Field Height</p>
-                <input class="var-inp" type="number" value="30" onchange="setFieldVar('height', this.value)">
+                <input class="var-inp" type="number" value="40" onchange="setFieldVar('height', this.value)">
             </div>
             <div class="cc-row">
                 <p class="var-title">Field Zoom</p>
@@ -45,15 +45,23 @@
             </div>
             <div class="cc-row">
                 <p class="var-title">Background Color</p>
-                <input class="var-inp" value="rgb(25,10,40)" type="color" onchange="setBg(this.value)">
+                <input class="var-inp" value="#0f1028" type="color" onchange="setBg(this.value)">
             </div>
             <div class="cc-row">
                 <p class="var-title">Particle Color</p>
-                <input class="var-inp" value="white" type="color" onchange="setParticleVar('color', this.value)">
+                <input class="var-inp" value="#ffffff" type="color" onchange="setParticleVar('color', this.value)">
             </div>
             <div class="cc-row">
                 <p class="var-title">Particle Opacity</p>
-                <input class="var-inp rangeinp" type="range" value="0.1" min="0.05" max="1.0" step="0.05" onchange="setParticleVar('opacity', this.value)">
+                <input class="var-inp rangeinp" type="range" value="0.1" min="0.05" max="1.0" step="0.01" onchange="setParticleVar('opacity', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Rainbow Colors</p>
+                <input class="var-inp" type="checkbox" onchange="setParticleVar('userainbow', this.checked)">
+            </div>
+            <div id="cc-row">
+                <button id="pause-btn" onclick="togglePause()">Pause</button>
+                <button onclick="saveImage()">Save Image</button>
             </div>
         </div>
     </div>
