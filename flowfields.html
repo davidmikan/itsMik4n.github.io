@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Fields</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="flowfields_src/flowfield.js" type="module"></script>
+    <div class="overlay">
+        <div id="controlcenter">
+            <div class="cc-row">
+                <p class="var-title">Field Width</p>
+                <input class="var-inp" type="number" value="20" onchange="setFieldVar('width', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Field Height</p>
+                <input class="var-inp" type="number" value="30" onchange="setFieldVar('height', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Field Zoom</p>
+                <input class="var-inp rangeinp" type="range" value="3" min="1.0" max="10.0" step="0.1" onchange="setFieldVar('zoom', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Seed</p>
+                <input class="var-inp" type="number" value="0" onchange="setFieldVar('seed', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Particle Count</p>
+                <input class="var-inp rangeinp" type="range" value="5000" min="100" max="15000" onchange="setParticleVar('count', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Field Influence</p>
+                <input class="var-inp rangeinp" type="range" value="80" min="30" max="300" onchange="setParticleVar('fieldInfluence', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Particle Speed</p>
+                <input class="var-inp rangeinp" type="range" value="3" min="0" max="20" onchange="setParticleVar('speed', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Show Vectors</p>
+                <input class="var-inp" type="checkbox" onchange="setFieldVar('debugMode', this.checked)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Background Color</p>
+                <input class="var-inp" value="rgb(25,10,40)" type="color" onchange="setBg(this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Particle Color</p>
+                <input class="var-inp" value="white" type="color" onchange="setParticleVar('color', this.value)">
+            </div>
+            <div class="cc-row">
+                <p class="var-title">Particle Opacity</p>
+                <input class="var-inp rangeinp" type="range" value="0.1" min="0.05" max="1.0" step="0.05" onchange="setParticleVar('opacity', this.value)">
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+            margin: 0;
+        }
+        .overlay {
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: rgba(247, 247, 247, 0.6);
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        .cc-row {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+        .var-title {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+        .var-inp {
+            width: 5rem;
+            font-size: 1rem;
+            border-radius: 0.2rem;
+            border: none;
+            height: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .rangeinp {
+            width: 10rem;
+        }
+        .var-inp:focus {
+            outline: none;
+        }
+    </style>
+    <!-- <script src="src/scene.js"></script> -->
+</body>
+</html>

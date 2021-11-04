@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'avenir';
+    src: url('/fonts/avenir.ttf') format("ttf");
+}
+@font-face {
+    font-family: 'didot';
+    src: url('/fonts/didot.ttf') format("ttf");
+}
+
+@media not all and (hover: hover) {
+    .content {
+        width: 100%;
+        padding-top: 2rem;
+    }
+    #namecard {
+        flex-flow: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+}
+@media (hover: hover) {
+    .content {
+        max-width: 65vw;
+        width: 55rem;
+        padding-top: 5rem;
+    }
+    #namecard {
+        flex-flow: row;
+        align-items: flex-end;
+        margin-bottom: 3rem;
+    }
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(252, 252, 252);
+}
+
+.content {
+    padding-bottom: 5rem;
+    font-family: 'avenir';
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-family: 'didot';
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-family: 'didot';
+    font-size: 1.7rem;
+}
+
+p {
+    padding-left: 2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: black underline;
+}
+
+a:visited {
+    color: black;
+}
+
+#namecard {
+    display: flex;
+    justify-content: space-between;
+}
+
+#namecard-el {
+    margin-bottom: 0;
+}

@@ -4,117 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>David Mikan Lebenslauf</title>
 </head>
 <body>
-    <style>
-        @font-face {
-            font-family: 'avenir';
-            src: url('/fonts/avenir.ttf') format("ttf");
-        }
-        @font-face {
-            font-family: 'didot';
-            src: url('/fonts/didot.ttf') format("ttf");
-        }
-
-        @media not all and (hover: hover) {
-            .content {
-                width: 95vw;
-                padding-top: 2rem;
-            }
-            #namecard {
-                flex-flow: column;
-                align-items: flex-start;
-                margin-bottom: 2rem;
-            }
-        }
-        @media (hover: hover) {
-            .content {
-                max-width: 65vw;
-                width: 55rem;
-                padding-top: 5rem;
-            }
-            #namecard {
-                flex-flow: row;
-                align-items: flex-end;
-                margin-bottom: 3rem;
-            }
-        }
-
-        body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: rgb(252, 252, 252);
-        }
-
-        .content {
-            padding-bottom: 5rem;
-            font-family: 'avenir';
-            font-size: 1.2rem;
-        }
-
-        h1 {
-            font-family: 'didot';
-            font-size: 2.4rem;
-        }
-
-        h2 {
-            font-family: 'didot';
-            font-size: 1.7rem;
-        }
-        
-        p {
-            padding-left: 2rem;
-        }
-
-        a {
-            color: black;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: black underline;
-        }
-
-        a:visited {
-            color: black;
-        }
-
-        #namecard {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #namecard-el {
-            margin-bottom: 0;
-        }
-
-    </style>
     <div class="content">
         <div id="namecard">
             <h1 id="namecard-el">David Mikan</h1>
-            <p id="namecard-el">📞 +43 660 3412351<br />📨 <a href="mailto:david.mikan03@gmail.com">david.mikan03@gmail.com</a></p>
+            <p id="namecard-el">📞 <a href="tel:+436603412351">+43 660 3412351</a><br />📨 <a href="mailto:david.mikan03@gmail.com">david.mikan03@gmail.com</a></p>
         </div>
+        <h2>Motivation</h2>
+        <p>Hey, ich bin David! Ich habe im Juni 2021 maturiert und habe meine Stellung im Dezember. Ich beschäftige mich mit Videospielen und Computern seit meiner Kindheit und liebe es, durch Code. Meinen Zivildienst bei der OCG zu absolvieren wäre für mich eine tolle Möglichkeit, die Zeit zu nutzen und mich in einem Bereich zu engagieren</p>
         <h2>Bildung</h2>
         <p>Ich habe 2013-2021 das Akademische Gymnasium Wien besucht und 2021 mit gutem Erfolg maturiert.</p>
         <p>Momentan studiere ich Technische Mathematik an der TU Wien und möchte im Wintersemester 2022 das Informatikstudium an der TU beginnen.</p>
-        <h2>Praktika / Joberfahrung</h2>
-        <p><u>x 2018</u>: Schulpraktikum beim Spielentwickler broken rules</p>
-        <p><u>Sep. 2019- Okt. 2021</u>: Job als Praktikant und anschließend QA-Tester beim Spieleentwickler kunabi brother</p>
-        <p><u>Nov. - Dez. 2021</u>: QA-Tester für broken rules</p>
         <h2>Sprachen</h2>
-        <p><u>Deutsch</u>: muttersprachliches Niveau</p>
-        <p><u>Serbokroatisch</u>: muttersprachliches Niveau</p>
-        <p><u>Französisch</u>: B2</p>
-        <p><u>Englisch</u>: B2-C1</p>
+        <p><i>Deutsch</i>: muttersprachliches Niveau</p>
+        <p><i>Serbokroatisch</i>: muttersprachliches Niveau</p>
+        <p><i>Französisch</i>: B2</p>
+        <p><i>Englisch</i>: B2-C1</p>
         <h2>Software- und Programmiererfahrung</h2>
-        <p>Ich bin vertraut <u>Adobe Photoshop</u> und <u>Illustrator</u>. Ich kann mit der 3d-Software <u>Blender</u> umgehen und mithilfe von <u>Davinci Resolve</u> Videos schneiden und bearbeiten.</p>
-        <p><u>HTML/CSS/Javascript und Flask</u>: ich habe statische Websites in HTML/CSS gebaut und kann sie mithilfe von Javascript interaktiv machen. Ferner beherrsche ich das Python-Framework Flask, um ein Backend für eine Website zu bauen.</p>
-        <p><u>Python</u>: Ich habe im Rahmen meiner vorwissenschaftlichen Arbeit mithilfe von Python Daten von reddit.com gesammelt und diese auch in Python statistisch ausgewertet. Weiters habe ich mehrere Projekte in Python implementiert.</p>
+        <p>Ich bin vertraut mit <i>Adobe Photoshop</i> und <i>Illustrator</i>. Ich kann mit der 3d-Software <i>Blender</i> umgehen und mithilfe von <i>Davinci Resolve</i> Videos schneiden und bearbeiten.</p>
+        <p><i>HTML/CSS/Javascript und Flask</i>: ich habe statische Websites in HTML/CSS gebaut und kann sie mithilfe von Javascript interaktiv machen. Ferner beherrsche ich das Python-Framework Flask, um ein Backend für eine Website zu bauen.</p>
+        <p><i>Python</i>: Ich habe im Rahmen meiner vorwissenschaftlichen Arbeit mithilfe von Python Daten von reddit.com gesammelt und diese auch in Python statistisch ausgewertet. Weiters habe ich mehrere Projekte in Python implementiert.</p>
         <p>Zurzeit lerne ich die Programmiersprache C in meinem Mathematikstudium.</p>
+        <h2>Praktika / Joberfahrung</h2>
+        <p><i>x 2018</i>: Schulpraktikum beim Spielentwickler broken rules</p>
+        <p><i>Sep. 2019- Okt. 2021</i>: Job als Praktikant und anschließend QA-Tester beim Spieleentwickler kunabi brother</p>
+        <p><i>Nov. - Dez. 2021</i>: QA-Tester für broken rules</p>
         <h2>Hobbies / Erfolge</h2>
         <p>Ich belegte innerhalb meiner Schule 3 Mal den ersten Platz im nationalen Logikwettbewerb 'Känguru der Mathematik'</p>
         <p>Ich habe 8 Jahre lang Wasserball trainiert und mit meinem Team mehrmals die Österreichische Meisterschaft gewonnen.</p>
